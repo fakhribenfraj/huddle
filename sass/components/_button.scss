@@ -1,0 +1,36 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    width: max-content;
+    text-decoration: none;
+    border: none;
+    display: inline-block;
+    color: $color-primary;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 0.2rem .5rem rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    border-radius: .5rem;
+  }
+
+  &--pink {
+    &,
+    &:link,
+    &:visited {
+      color: $color-secondary-light;
+      background-color: $color-primary;
+    }
+  }
+  &--void {
+    &,
+    &:link,
+    &:visited {
+      border: solid $color-primary;
+      color: $color-primary;
+      background-color: transparent;
+    }
+  }
+  &--round {
+    border-radius: 5rem !important;
+  }
+}
