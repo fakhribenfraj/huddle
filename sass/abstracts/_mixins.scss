@@ -1,9 +1,15 @@
 @mixin wave($position) {
-    padding: 10rem 0;
-//   grid-column: 1/-1;
-  background-image: url("../images/bg-section-" + $position + "-desktop-1.svg");
-  background-position: $position;
+  content: "";
+  width: 100%;
+  height: 16rem;
+  display: block;
+  grid-column: span 2;
+  background-image: url("../images/bg-section-" + $position + "-desktop-2.svg");
   background-repeat: no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-position: $position;
+  z-index: 2;
 }
 @mixin square-shape($size) {
   height: $size;
