@@ -1,38 +1,44 @@
 .app {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   row-gap: 2rem;
   padding: 4rem;
+  overflow-x: visible;
 }
 .section {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
-  column-gap: 5%;
-  margin: 3rem 0;
-  &__part {
-    width: 100%;
-    padding: 5rem;
-    text-align: center;
-  }
+  justify-content: space-between;
   &--dark {
     background-color: $color-black;
+    margin: 0;
+    padding: 2rem 5rem;
+    border: none;
+    z-index: 1;
+    transform: translateY(-.5rem);
   }
 }
 .wave {
-  background-color: $color-secondary-light;
-  position: relative;
-  &::before {
-    @include wave(top);
+  &__part {
+    align-self: center;
+    width: 40%;
+    margin: 0 auto;
   }
-  &::after {
-    @include wave(bottom);
-  }
-  &--dark{
-    background-color: black;
-    &::before {
-      @include wave(top);
-    }
+  &--blue {
+    padding: 0 10rem;
+    background-image: url("../images/bg-section-top-desktop-1.svg"),
+      linear-gradient(
+        to bottom,
+        transparent 165px,
+        $color-secondary-light 165px,
+        $color-secondary-light 80%,
+        transparent
+      ),
+      url("../images/bg-section-bottom-desktop-1.svg");
+    background-position: top, center, bottom;
+    background-repeat: no-repeat;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
   }
 }

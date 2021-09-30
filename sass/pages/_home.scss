@@ -30,10 +30,10 @@
     margin: 0;
     border: none;
     width: 100%;
-    transform: translateY(.4rem);
   }
   &__icon {
     filter: invert(0.5) brightness(5);
+    fill: $color-white;
   }
 
   .social-media {
@@ -77,8 +77,8 @@
 
       &:focus {
         outline: none;
-        box-shadow: 0 1rem 2rem rgba(white, 0.4);
-        border-bottom: .4rem solid #80ed99;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+        border-bottom: 3px solid $color-primary-light;
       }
 
       &:focus:invalid {
